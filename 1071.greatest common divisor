@@ -1,0 +1,21 @@
+class Solution {
+    public String gcdOfStrings(String str1, String str2) {
+        // check if string concatenation is same or not..if they are equal then proceed.
+        if(!(str1+str2).equals(str2+str1)){
+            //to get substring assume l
+          return "";
+        }
+          int l = gcd(str1.length(),str2.length());
+            return str1.substring(0,l);
+    }
+        //we can perform gcd through euclidian algorithm
+       public int gcd(int a,int b){
+            if(b==0){
+                return a;
+            }
+            else{
+                return gcd(b,a%b);
+            }
+        } 
+    
+}
